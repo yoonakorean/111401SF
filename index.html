@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>10-1 句子填空挑戰</title>
+<title>14-1 句子填空挑戰</title>
 <style>
 body { font-family: sans-serif; max-width: 600px; margin: auto; text-align: center; padding: 30px 15px; }
 #logo, #logo-game { width: 150px; max-width: 80%; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
@@ -46,7 +46,7 @@ if (password !== "1231") { alert("密碼錯誤，無法進入！"); window.locat
 
 <div id="game-area" class="hidden">
 <img id="logo-game" src="logo.png" alt="Logo"/>
-<div id="game-title">10-1 句子填空挑戰</div>
+<div id="game-title">14-1 句子填空挑戰</div>
 <div id="question-number"></div>
 <div id="timer" style="font-size:18px; color:red; margin-bottom:15px;"></div>
 <div class="question-zh" id="question-ch"></div>
@@ -68,18 +68,18 @@ if (password !== "1231") { alert("密碼錯誤，無法進入！"); window.locat
 
 <script>
 const questions = [
-{ audio: "11100101S.mp3", question: "＿＿이 많습니다.", answer: "옷", full: "옷이 많습니다.", chinese: "衣服很多。" },
-{ audio: "11100102S.mp3", question: "＿＿가 쉽니다.", answer: "할머니", full: "할머니가 쉽니다.", chinese: "奶奶休息。" },
-{ audio: "11100103S.mp3", question: "＿＿가 맵습니다.", answer: "떡볶이", full: "떡볶이가 맵습니다.", chinese: "辣炒年糕很辣。" },
-{ audio: "11100104S.mp3", question: "＿＿가 귀엽습니다.", answer: "강아지", full: "강아지가 귀엽습니다.", chinese: "狗狗很可愛。" },
-{ audio: "11100105S.mp3", question: "＿＿이 유명합니다.", answer: "한국 아이돌", full: "한국 아이돌이 유명합니다.", chinese: "韓國偶像很有名。" },
-{ audio: "11100106S.mp3", question: "＿＿가 예쁩니다.", answer: "원피스", full: "원피스가 예쁩니다.", chinese: "洋裝很漂亮。" },
-{ audio: "11100107S.mp3", question: "＿＿이 큽니다.", answer: "신발", full: "신발이 큽니다.", chinese: "鞋子很大。" },
-{ audio: "11100108S.mp3", question: "＿＿이 많이 먹습니다.", answer: "형", full: "형이 많이 먹습니다.", chinese: "哥哥吃很多。(男生稱呼)" },
-{ audio: "11100109S.mp3", question: "＿＿이 더 빠릅니까?", answer: "지하철", full: "지하철이 더 빠릅니까?", chinese: "地鐵更快嗎？" },
-{ audio: "11100110S.mp3", question: "＿＿가 좋습니다.", answer: "날씨", full: "날씨가 좋습니다.", chinese: "天氣很好。" },
-{ audio: "11100111S.mp3", question: "＿＿이 많이 없습니다", answer: "시간", full: "시간이 많이 없습니다", chinese: "沒有很多時間。" },
-{ audio: "11100112S.mp3", question: "＿＿가 작습니다.", answer: "사이즈", full: "사이즈가 작습니다.", chinese: "尺寸很小。" }
+{ audio: "11140101S.mp3", question: "아침 ＿＿이에요.", answer: "아홉 시 반", full: "아침 아홉 시 반이에요.", chinese: "早上 9點半。" },
+{ audio: "11140102S.mp3", question: "오후 ＿＿이에요.", answer: "다섯 시 십이 분", full: "오후 다섯 시 십이 분이에요.", chinese: "下午 5點12分。" },
+{ audio: "11140103S.mp3", question: "저녁 ＿＿이에요.", answer: "여섯 시 사십칠 분", full: "저녁 여섯 시 사십칠 분이에요.", chinese: "傍晚 6點47分。" },
+{ audio: "11140104S.mp3", question: "저녁 ＿＿이에요.", answer: "일곱 시 오십구 분", full: "저녁 일곱 시 오십구 분이에요.", chinese: "傍晚 7點59分。" },
+{ audio: "11140105S.mp3", question: "오전 ＿＿이에요.", answer: "여덟 시 이십육 분", full: "오전 여덟 시 이십육 분이에요.", chinese: "上午 8點26分。" },
+{ audio: "11140106S.mp3", question: "월요일 오후 ＿＿이에요.", answer: "세 시 삼십 분", full: "월요일 오후 세 시 삼십 분이에요.", chinese: "禮拜一 下午 3點30分。" },
+{ audio: "11140107S.mp3", question: "화요일 오후 ＿＿이에요.", answer: "네 시 이십삼 분", full: "화요일 오후 네 시 이십삼 분이에요.", chinese: "禮拜二 下午 4點23分。" },
+{ audio: "11140108S.mp3", question: "수요일 새벽 ＿＿이에요.", answer: "한 시 십 분", full: "수요일 새벽 한 시 십 분이에요.", chinese: "禮拜三 半夜 1點10分。" },
+{ audio: "11140109S.mp3", question: "목요일 새벽 ＿＿이에요.", answer: "두 시 오십이 분", full: "목요일 새벽 두 시 오십이 분이에요.", chinese: "禮拜四 半夜 2點52分。" },
+{ audio: "11140110S.mp3", question: "금요일 밤 ＿＿이에요.", answer: "열 시 십삼 분", full: "금요일 밤 열 시 십삼 분이에요.", chinese: "禮拜五 晚上 10點13分。" },
+{ audio: "11140111S.mp3", question: "토요일 오전 ＿＿이에요.", answer: "열한 시 삼십오 분", full: "토요일 오전 열한 시 삼십오 분이에요.", chinese: "禮拜六 上午 11點35分。" },
+{ audio: "11140112S.mp3", question: "일요일 점심 ＿＿예요.", answer: "열두 시", full: "일요일 점심 열두 시예요.", chinese: "禮拜日 中午 12點。" }
 ];
 
 const modeSelectDiv=document.getElementById("mode-select");
@@ -103,8 +103,8 @@ let shuffledQuestions=[],current=0,correct=0,finalScore=0;
 let timer=null,timeLeft=0,timerStarted=false,currentMode=null,startTime=null;
 
 // 顯示標題與送表單標題
-const displayTitle = "10-1 句子填空挑戰";
-const fullTitle = "11-10-1 句子填空挑戰";
+const displayTitle = "14-1 句子填空挑戰";
+const fullTitle = "11-14-1 句子填空挑戰";
 
 function shuffle(array){for(let i=array.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[array[i],array[j]]=[array[j],array[i]];}return array;}
 
